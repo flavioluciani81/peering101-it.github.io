@@ -4,7 +4,6 @@
 
 - [Cos'è](RPKI.md#cosè)
 - [Architettura RPKI](RPKI.md#architettura-rpki)
-- RPKI e prefix Hijacking
 - [Route Origin Authorization (ROA)](RPKI.md#route-origin-authorization-roa)
 - [Creazione dei ROA](RPKI.md#creazione-dei-roa)
 - [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine--0)
