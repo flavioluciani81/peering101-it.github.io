@@ -88,4 +88,4 @@ Nella schermata successiva, cliccare nel menu a sinistra sulla voce "RPKI dashbo
 
 ![RPKI dashboard](rpki_dashboard.png "RPKI dashboard")
 
-Da qui è possibile visualizzare l'elenco dei ROA creati, aggiungerne di nuovi e cancellarli.
+Da qui è possibile visualizzare l'elenco dei ROA creati, aggiungerne di nuovi oppure cancellarli.
