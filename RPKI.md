@@ -149,8 +149,8 @@ Per stabilire la sessione RTR con il Validator è sufficiente specificare tre pa
 Cisco IOS e IOS XE
 
   router(config)# router bgp numero-AS
-  router(config-router)# bgp rpki server tcp IP-RPKI-Validator 
-                         port porta-RPKI-Validator refresh secondi
+  router(config-router)# bgp rpki server tcp IP-RPKI-Validator port porta-RPKI-Validator refresh secondi
+  
 ```
 ```Cisco IOS XR
 
@@ -158,8 +158,7 @@ Cisco IOS XR
 
   RP/0/RP0/CPU0:router(config)# router bgp numero-AS
   RP/0/RP0/CPU0:router(config-bgp)# rpki server IP-RPKI-Validator 
-  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# transport tcp 
-                                                port porta-RPKI-Validator 
+  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# transport tcp port porta-RPKI-Validator 
   RP/0/RP0/CPU0:router(config-bgp-rpki-server)# refresh-time secondi
 
 ```
