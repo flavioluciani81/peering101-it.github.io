@@ -33,6 +33,8 @@ RPKI utilizza il formato dei certificati digitali X.509 con l’estensione per i
 
 ## Architettura RPKI
 
+![architettura_rpki](architettura_rpki "Architettura RPKI")
+
 L’architettura è basata su dei database (RPKI repository), dove sono contenute le informazioni sui ROA, informazioni che possono essere immesse direttamente dai RIR o anche dai NIR/LIR/ISP (verificate comunque dai RIR) attraverso un particolare PublicationProtocol. Di solito per questo i RIR mettono a disposizione delle interfacce web semplificate che consentono di nascondere agli end user tutte le complessità legate ai Certificati Digitali, focalizzando l’attenzione sulla sola creazione e pubblicazione dei ROA.
 
 Ciascun RPKI repository, oltre ai ROA, mantiene anche una lista di sub-RPKI repository (anche detti Trust Anchors) che vengono utilizzati per sincronizzare le informazioni sui ROA e quindi realizzare un unico RPKI repository virtuale a livello mondiale.
