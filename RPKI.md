@@ -235,6 +235,22 @@ router(config-bgp-af)# bgp bestpath origin-as allow invalid
 
 ```
 
+Per disabilitare l’utilizzo dell’informazione sugli stati di validazione nel processo di selezione
+
+```
+
+Cisco IOS e IOS XE
+
+router(config)# router bgp numero-AS
+router(config-router)# address-family ipv4 unicast
+router(config-router-af)# bgp bestpath prefix-validate disable
+
+Cisco IOS XR
+router(config)# router bgp numero-AS
+router(config-bgp)# address-family ipv4 unicast
+router(config-bgp-af)# bgp origin-as validation disable
+
+```
 
 ## Software di validazione
 
