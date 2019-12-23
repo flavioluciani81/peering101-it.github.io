@@ -6,7 +6,7 @@
 - [Architettura RPKI](RPKI.md#architettura-rpki)
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - Route Origin Authorization (ROA)
-- [Route Origin Authorization](RPKI.md#Route-Origin-Authorization)
+- [Route Origin Authorization](RPKI.md#route-origin-authorization)
 - Creazione dei ROA
 - ROA con AS Origine = 0
 - Route Origin Validation (ROV)
