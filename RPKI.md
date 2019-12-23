@@ -101,3 +101,6 @@ L’utilizzo dell’AS = 0 è stato specificato nella RFC 7607 - Codification of
 
 ## Route Origin Validation (ROV)
 
+Il processo di validazione di un annuncio BGP, si basa su un confronto tra le informazioni contenute nell’annuncio, e i ROA presenti nel database del router stesso, scaricati dal RPKI Validator. Il Validator è un software dedicato a scaricare una copia in locale di tutti i ROA dai repository RPKI dei RIR. Il risultato è una lista di tutte le combinazioni ASNs e prefissi chiamata "validated cache". Il contenuto di questa lista è la vera e propria informazione sulle coppie AS/prefisso chiamata "Validated ROA Payload (VRP)".
+
+I router inoltre interrogano il validatore tramite il protocollo RTR per verificare la validità o meno dei prefissi ricevuti dalle sessioni BGP.
