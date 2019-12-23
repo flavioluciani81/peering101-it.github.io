@@ -100,3 +100,4 @@ Nella definizione di un ROA con AS = 0, è buona pratica definire Max-Maschera =
 L’utilizzo dell’AS = 0 è stato specificato nella RFC 7607 - Codification of AS 0 Processing, Agosto 2015.
 
 ## Route Origin Validation (ROV)
+
