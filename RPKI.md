@@ -134,6 +134,7 @@ __esempi di validazione__
 __esempio ROA con AS = 0__
 
 | ROA | AS Origine: 0 | Prefisso: 79.140.80.0/20 | MaxLength: 20 |
+| ----------- | ------ | ------ | ------ |
 
 In questo caso il risultato del processo di validazione sarà sempre uno stato di "Invalid".
 
