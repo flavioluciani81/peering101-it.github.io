@@ -50,9 +50,17 @@ Lato ISP, l’architettura prevede l’utilizzo di server denominati *RPKI Valid
 
 I ROA sono oggetti firmati digitalmente che accoppiano un AS a uno o più prefissi IP. Possono essere visti come degli oggetti che forniscono un mezzo per verificare se un AS è autorizzato ad annunciare un determinato prefisso IP.
 
-Formato di un ROA:
+Formato di un ROA IPv4:
 
 | Prefisso originato | 172.16.0.0/16 |
 | ----------- | ------ |
 | AS Origine | 12345 |
+| Firma Digitale | qç!r5@eX!%89?@cv! |
+
+Formato di un ROA IPv6:
+
+| Prefisso originato | 2001:db8:1::/48 |
+| ----------- | ------ |
+| AS Origine | 12345 |
+| Firma Digitale | qç!r5@eX!%89?@cv! |
 
