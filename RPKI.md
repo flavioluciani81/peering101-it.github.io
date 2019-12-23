@@ -308,7 +308,7 @@ Copntenuto della tabella BGP
 
 ```
 
-router# show bgp ipv4 unicastBGP table version is 27, local router ID is 172.20.0.1
+router# show bgp ipv4 unicast BGP table version is 27, local router ID is 172.20.0.1
 Status codes: s suppressed, d damped, h history, * valid, > best, 
 i - internal, r RIB-failure, S Stale, m multipath, b backup-path, 
 f RT-Filter, x best-external, a additional-path, c RIB-compressed,
