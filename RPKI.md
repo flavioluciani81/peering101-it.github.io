@@ -280,6 +280,60 @@ Si noti che l’informazione sullo stato di validazione viene propagata utilizza
 
 Alla ricezione dell’annuncio iBGP contenente la BGP Extended Community, l’iBGP peer è in grado di ricavare lo stato di validazione dell’annuncio, senza necessità di un collegamento verso il RPKI Validator.
 
+Azione sugli annunci: in funzione dei risultati del processo di validazione di un annuncio è possibile definire particolari azioni. 
+
+Ad esempio (IOS e IOS XE)
+ 
+- Assegna LP =200 agli annunci Valid
+- Assegna LP =100 agli annunci NotFound
+- Assegna LP =50 agli annunci Invalid
+
+```
+
+route-map RPKI permit 10
+  match rpki invalid
+  set local-preference 50
+ !
+ route-map RPKI permit 20
+  match rpki not-found
+  set local-preference 100
+ !
+ route-map RPKI permit 30
+  match rpki valid
+  set local-preference 200
+
+```
+
+Copntenuto della tabella BGP 
+
+```
+
+router# show bgp ipv4 unicastBGP table version is 27, local router ID is 172.20.0.1
+Status codes: s suppressed, d damped, h history, * valid, > best, 
+i - internal, r RIB-failure, S Stale, m multipath, b backup-path, 
+f RT-Filter, x best-external, a additional-path, c RIB-compressed,
+Origin codes: i - IGP, e - EGP, ? - incomplete
+RPKI validation codes: V valid, I invalid, N Not found
+
+     Network          Next Hop          Metric LocPrf Weight Path
+V*>  2.255.248.0/21   10.0.10.99             0             0 1299 i
+V*>  5.63.24.0/21     10.0.10.99             0             0 1299 i
+V*>  5.158.208.0/21   10.0.10.29             0             0 2914 i
+V*>  5.178.40.0/21    10.0.10.62             0             0 6762 i
+V*>  62.73.160.0/24   10.0.10.29             0             0 2914 i
+V*>  79.140.80.0/20   10.0.10.62             0             0 6762 i
+N*>  101.1.0.0/16     10.0.10.11             0             0 101 i
+I*   103.13.80.0/23   10.0.10.99             0             0 1299 i
+I*   105.233.0.0/17   10.0.10.11             0             0 101 i
+
+```
+
+La Tabella è praticamente identica alle classiche Tabelle BGP, con la sola differenza dell’informazione aggiuntiva sullo stato di validazione:
+
+V = Valid
+N = NotFound
+I = Invalid
+
 
 ## Software di validazione
 
