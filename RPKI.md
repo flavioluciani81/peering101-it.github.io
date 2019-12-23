@@ -144,11 +144,26 @@ Per stabilire la sessione RTR con il Validator è sufficiente specificare tre pa
 2) La porta TCP da utilizzare. Di solito la porta utilizzata dal RPKI Validator è la 323, ma può anche essere diversa. Ad esempio, se si utilizzasse il RPKI Validator fornito dal RIR Europeo RIPE NCC, la porta da utilizzare è la 8282
 3) Il periodo delle query verso il RPKI Validator (refresh time) per il download dei ROA. Un valore tipico utilizzato nelle applicazioni pratiche è 600 sec
 
-```Cisco IOS
+```Cisco IOS e IOS XE
+
+Cisco IOS e IOS XE
+
   router(config)# router bgp numero-AS
   router(config-router)# bgp rpki server tcp IP-RPKI-Validator 
                          port porta-RPKI-Validator refresh secondi
 ```
+```Cisco IOS XR
+
+Cisco IOS XR
+
+  RP/0/RP0/CPU0:router(config)# router bgp numero-AS
+  RP/0/RP0/CPU0:router(config-bgp)# rpki server IP-RPKI-Validator 
+  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# transport tcp 
+                                                port porta-RPKI-Validator 
+  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# refresh-time secondi
+
+```
+
 
 
 ## Software di validazione
