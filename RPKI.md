@@ -2,7 +2,7 @@
 
 ## Sommario
 
-- Cos'è
+- `Cos'è`;
 - Architettura RPKI
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - Route Origin Authorization (ROA)
