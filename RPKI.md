@@ -6,7 +6,7 @@
 - [Architettura RPKI](RPKI.md#architettura-rpki)
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - [Route Origin Authorization (ROA)](RPKI.md#route-origin-authorization-roa)
-- Creazione dei ROA
+- [Creazione dei ROA](RPKI.md#creazione-dei-roa)
 - ROA con AS Origine = 0
 - Route Origin Validation (ROV)
 - Aspetti di configurazione
@@ -75,3 +75,6 @@ Un ROA ha 4 componenti:
 3) __AS Origine__: il numero dell’AS che origina il prefisso IP o una sua subnet ammessa, ossia con lunghezza della maschera inferiore o al più uguale a quella specificata nel punto precedente
 
 4) __Firma Digitale__: basata sul sistema chiave pubblica/chiave privata
+
+## Creazione dei ROA
+
