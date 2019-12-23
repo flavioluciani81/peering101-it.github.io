@@ -87,3 +87,5 @@ La prima cosa da fare è accedere al portale del RIR di riferimento (in questa g
 Nella schermata successiva, cliccare nel menu a sinistra sulla voce "RPKI dashboard" e quindi sul tab "Route Origin Authorisations (ROAs)"
 
 ![RPKI dashboard](rpki_dashboard.png "RPKI dashboard")
+
+Da qui è possibile visualizzare l'elenco dei ROA creati, aggiungerne di nuovi e cancellarli.
