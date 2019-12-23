@@ -139,3 +139,11 @@ In questo caso il risultato del processo di validazione sarà sempre uno stato d
 ## Aspetti di configurazione
 
 ## Software di validazione
+
+- Routinator: https://www.nlnetlabs.nl/projects/rpki/routinator/
+
+- Ripe NCC Validator: https://www.ripe.net/manage-ips-and-asns/resource-management/certification/tools-and-resources 
+
+- OctoRPKI: https://github.com/cloudflare/cfrpki#octorpki
+
+- rcynic: https://github.com/dragonresearch/rpki.net
