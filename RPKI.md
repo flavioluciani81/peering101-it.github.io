@@ -330,9 +330,9 @@ I*   105.233.0.0/17   10.0.10.11             0             0 101 i
 
 La Tabella è praticamente identica alle classiche Tabelle BGP, con la sola differenza dell’informazione aggiuntiva sullo stato di validazione:
 
-V = Valid
-N = NotFound
-I = Invalid
+- V = Valid
+- N = NotFound
+- I = Invalid
 
 
 ## Software di validazione
