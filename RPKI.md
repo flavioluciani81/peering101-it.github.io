@@ -48,7 +48,7 @@ Lato ISP, l’architettura prevede l’utilizzo di server denominati *RPKI Valid
 
 ## Route Origin Authorization (ROA)
 
-I ROA sono oggetti firmati digitalmente che accoppiano un AS a uno o più prefissi IP. Possono essere visti come degli oggetti che forniscono un mezzo per verificare se un AS è autorizzato ad annunciare un determinato prefisso IP.
+I ROA sono oggetti firmati digitalmente. Accoppiano un AS a uno o più prefissi IP. Possono essere visti come degli oggetti che forniscono un mezzo per verificare se un AS è autorizzato ad annunciare un determinato prefisso IP.
 
 Formato di un ROA IPv4:
 
