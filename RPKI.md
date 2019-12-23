@@ -46,3 +46,4 @@ Affinché tutto ciò sia efficace, è necessaria per un AS la certezza che le in
 
 Lato ISP, l’architettura prevede l’utilizzo di server denominati RPKI Validator, che a loro volta si interfacciano con i RPKI repository dei vari RIR per effettuare un download locale dei ROA. I router di Edge dell’ISP, attraverso il protocollo standard RPKI-to-Router Protocol (RFC 6810 - The Resource Public Key Infrastructure to Router Protocol, Gennaio 2013), scaricano localmente i ROA presenti nel RPKI Validator, inserendoli in una RPKI Table. All’arrivo di un annuncio BGP, un router può così inferire sulla validità o meno degli annunci che riceve, confrontando il contenuto degli annunci con quello dei ROA presenti nella propria RPKI Table.
 
+
