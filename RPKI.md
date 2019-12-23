@@ -252,6 +252,35 @@ router(config-bgp-af)# bgp origin-as validation disable
 
 ```
 
+Con RPKI abilitato, il comportamento di default di un router Cisco è di non propagare sulle sessioni iBGP, lo stato di validazione RPKI degli annunci eBGP ricevuti. Per consentirne la propagazione si utilizzano i seguenti comandi:
+
+```
+Cisco IOS e IOS XE
+
+router(config)# router bgp numero-AS
+router(config-router)# address-family ipv4 unicast
+router(config-router-af)# neighbor IP-iBGP-peer announce rpki state
+router(config-router-af)# neighbor IP-iBGP-peer send-community extended
+
+
+Cisco IOS XR
+
+router(config)# router bgp numero-AS
+router(config-bgp)# address-family ipv4 unicast
+router(config-bgp-af)# bgp origin as validation signal ibgp
+router(config-bgp-af)# send-community
+
+```
+
+Si noti che l’informazione sullo stato di validazione viene propagata utilizzando una opportuna BGP Extended Community. Il formato della Extended Community è il seguente:
+
+- 1° byte = 0x43 - indica Extended Community del tipo Non-Transitive Opaque (vedi RFC 7153, sez. 5.2.9).
+- 2° byte = 0x0 – indica BGP Origin Validation State (vedi RFC 7153, sez. 5.2.9).
+- 3-8° byte = 0x0/0x1/0x2 rispettivamente per gli stati Valid/NotFound/Invalid.
+
+Alla ricezione dell’annuncio iBGP contenente la BGP Extended Community, l’iBGP peer è in grado di ricavare lo stato di validazione dell’annuncio, senza necessità di un collegamento verso il RPKI Validator.
+
+
 ## Software di validazione
 
 - Routinator: https://www.nlnetlabs.nl/projects/rpki/routinator/
