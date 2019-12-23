@@ -1,5 +1,9 @@
 # Resource Public Key Infrastructure (RPKI)
 
+## sommario
+
+- `cos'è`_;
+
 ## Cos’è
 
 Molti degli incidenti nell’Internet sono causati dalla propagazione di incorrette informazioni di routing. 
