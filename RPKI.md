@@ -138,9 +138,9 @@ In questo caso il risultato del processo di validazione sarà sempre uno stato d
 
 ## Aspetti di configurazione
 
-> router(config)# router bgp numero-AS
-> router(config-router)# bgp rpki server tcp IP-RPKI-Validator 
->                        port porta-RPKI-Validator refresh secondi
+  router(config)# router bgp numero-AS
+  router(config-router)# bgp rpki server tcp IP-RPKI-Validator 
+                         port porta-RPKI-Validator refresh secondi
 
 
 ## Software di validazione
