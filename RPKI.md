@@ -54,6 +54,7 @@ Formato di un ROA IPv4:
 
 | Prefisso originato | 172.16.0.0/16 |
 | ----------- | ------ |
+| Lunghezza massima della maschera | 24 |
 | AS Origine | 12345 |
 | Firma Digitale | qç!r5@eX!%89?@cv! |
 
@@ -61,6 +62,16 @@ Formato di un ROA IPv6:
 
 | Prefisso originato | 2001:db8:1::/48 |
 | ----------- | ------ |
+| Lunghezza massima della maschera | 48 |
 | AS Origine | 12345 |
 | Firma Digitale | qç!r5@eX!%89?@cv! |
 
+Un ROA ha 4 componenti:
+
+1) __Prefisso originato__: Un prefisso IPv4 o IPv6, con una determinata lunghezza della maschera. Tipicamente è un prefisso assegnato da un RIR a un NIR/LIR/ISP
+
+2) __Lunghezza massima della maschera__: specifica quali subnet IP del prefisso originato possono essere annunciate
+
+3) __AS Origine__: il numero dell’AS che origina il prefisso IP o una sua subnet ammessa, ossia con lunghezza della maschera inferiore o al più uguale a quella specificata nel punto precedente
+
+4) __Firma Digitale__: basata sul sistema chiave pubblica/chiave privata
