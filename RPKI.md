@@ -166,21 +166,21 @@ Verifica della sessione TCP con il RPKI Validator
 
 ```
 RS-1# show bgp ipv4 unicast rpki servers
-BGP SOVC __neighbor is 192.168.150.84/8282 connected to port 8282__
+BGP SOVC neighbor is 192.168.150.84/8282 connected to port 8282
 Flags 64, Refresh time is 60, Serial number is 7, Session ID is 53667
 InQ has 0 messages, OutQ has 0 messages, formatted msg 33
 Session IO flags 3, Session flags 4008
  Neighbor Statistics:
-  __Prefixes 106876__
+  Prefixes 106876
   Connection attempts: 488
   Connection failures: 482
   Errors sent: 0
   Errors received: 4
 
-__Connection state is ESTAB__, I/O status: 1, unread input bytes: 0
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0
 Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
-__Local host: 192.168.150.1, Local port: 15600__
-__Foreign host: 192.168.150.84, Foreign port: 8282__
+Local host: 192.168.150.1, Local port: 15600
+Foreign host: 192.168.150.84, Foreign port: 8282
 Connection tableid (VRF): 0
 Maximum output segment queue size: 50
 
