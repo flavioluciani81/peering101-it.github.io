@@ -52,7 +52,7 @@ I ROA sono oggetti firmati digitalmente che accoppiano un AS a uno o più prefis
 
 Formato di un ROA:
 
-=========================== =========================== ===========================
-     Prefisso originato             172.16.0.0/16              2001:db8:1::/48
-=========================== =========================== ===========================
+| Prefisso originato | 172.16.0.0/16 |
+| ----------- | ------ |
+| AS Origine | 12345 |
 
