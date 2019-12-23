@@ -78,4 +78,8 @@ Un ROA ha 4 componenti:
 
 ## Creazione dei ROA
 
+I RIR forniscono una soluzione hosted nascondendo tutti i dettagli relativi alla complessità crittografica. Un operatore deve focalizzare la propria attenzione solo sulla creazione e pubblicazione dei ROA per i prefissi annunciati.
+
+La prima cosa da fare è accedere al portale del RIR di riferimento (in questa guida faremo riferimento al portale di RIPE NCC, https://www.ripe.net). Una volta autenticati, cliccare sul tab "My Resources".
+
 
