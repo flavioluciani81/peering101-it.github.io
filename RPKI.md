@@ -156,16 +156,16 @@ Cisco IOS e IOS XE
 
 Cisco IOS XR
 
-  RP/0/RP0/CPU0:router(config)# router bgp numero-AS
-  RP/0/RP0/CPU0:router(config-bgp)# rpki server IP-RPKI-Validator 
-  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# transport tcp port porta-RPKI-Validator 
-  RP/0/RP0/CPU0:router(config-bgp-rpki-server)# refresh-time secondi
+  router(config)# router bgp numero-AS
+  router(config-bgp)# rpki server IP-RPKI-Validator 
+  router(config-bgp-rpki-server)# transport tcp port porta-RPKI-Validator 
+  router(config-bgp-rpki-server)# refresh-time secondi
 
 ```
 Verifica della sessione TCP con il RPKI Validator
 
 ```
-RS-1# show bgp ipv4 unicast rpki servers
+router# show bgp ipv4 unicast rpki servers
 BGP SOVC neighbor is 192.168.150.84/8282 connected to port 8282
 Flags 64, Refresh time is 60, Serial number is 7, Session ID is 53667
 InQ has 0 messages, OutQ has 0 messages, formatted msg 33
@@ -185,6 +185,34 @@ Connection tableid (VRF): 0
 Maximum output segment queue size: 50
 
 . . . < resto dell’output omesso > . . .
+
+```
+
+Elenco dei ROA scaricati dal RPKI Validator (IPv4 e IPv6)
+
+```
+router# show bgp ipv4 unicast rpki table
+85094 BGP sovc network entries using 13615040 bytes of memory
+91633 BGP sovc record entries using 2932256 bytes of memory
+
+Network              Maxlen  Origin-AS  Source  Neighbor
+1.0.0.0/24           24      13335      0       192.168.150.84/8282
+1.1.1.0/24           24      13335      0       192.168.150.84/8282
+1.9.0.0/16           24      4788       0       192.168.150.84/8282
+1.9.12.0/24          24      65037      0       192.168.150.84/8282
+. . . < resto dell’output omesso > . . .
+
+router# show bgp ipv6 unicast rpki table
+14037 BGP sovc network entries using 2582808 bytes of memory
+15251 BGP sovc record entries using 488032 bytes of memory
+
+Network              Maxlen  Origin-AS  Source  Neighbor
+2001:200::/32        32      2500       0       192.168.150.84/8282
+2001:200:136::/48    48      9367       0       192.168.150.84/8282
+2001:200:900::/40    40      7660       0       192.168.150.84/8282
+2001:200:8000::/35   35      4690       0       192.168.150.84/8282
+. . . < resto dell’output omesso > . . .
+
 
 ```
 
