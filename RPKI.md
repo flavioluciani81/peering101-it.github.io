@@ -8,12 +8,12 @@
 
 Molti degli incidenti nell’Internet sono causati dalla propagazione di incorrette informazioni di routing. 
 Le più comuni minacce, come ad esempio route hijacking o route leak, sfruttano una vulnerabilità di fondo del 
-protocollo BGP: l’impossibilità di verificare se gli Autonomous System (AS) che propagano gli annunci sono realmente 
+protocollo BGP: l’impossibilità di verificare se gli *Autonomous System (AS)* che propagano gli annunci sono realmente 
 legittimati nel farlo. Infatti, le informazioni sulle proprietà delle risorse Internet (ASN e prefissi) sono contenute 
-all’interno di database pubblici chiamati Internet Routing Registry (IRR), gestiti e mantenuti dai Regional 
-Internet Registry (RIR). Non risiedono quindi all’interno del protocollo BGP.
+all’interno di database pubblici chiamati *Internet Routing Registry (IRR)*, gestiti e mantenuti dai *Regional 
+Internet Registry (RIR)*. Non risiedono quindi all’interno del protocollo BGP.
 
-Il BGP non ha alcuno strumento per verificare se un AS che annuncia un determinato prefisso nell’Internet sia autorizzato a farlo, ossia se il prefisso annunciato gli è stato assegnato effettivamente da un RIR. Dato che ogni prefisso può essere annunciato e originato da ogni AS, indipendentemente dal suo diritto nel farlo, è necessario un meccanismo out-of-band per aiutare il BGP a verificare quale AS può annunciare quale prefisso.
+Il BGP non ha alcuno strumento per verificare se un AS che annuncia un determinato prefisso nell’Internet sia autorizzato a farlo, ossia se il prefisso annunciato gli è stato assegnato effettivamente da un RIR. Dato che ogni prefisso può essere annunciato e originato da ogni AS, indipendentemente dal suo diritto nel farlo, è necessario un meccanismo out-of-band per aiutare il BGP a verificare *quale AS può annunciare quale prefisso*.
 
 Questo meccanismo esiste. E’ parte del sistema IRR. Come accennato in precedenza esistono dei database pubblici che contengono le informazioni sulla proprietà dei prefissi, alcuni gestiti dai grandi operatori, altri gestiti dai RIR stessi. E’ ormai ampiamente diffuso generare i filtri a partire dalle informazioni presenti negli IRR. Esiste però un limite a questo sistema: possiamo fidarci di queste informazioni? Purtroppo il sistema IRR è ben lontano dall’essere completo, gli oggetti che rappresentano le informazioni <Prefissi; AS autorizzati> non sono del tutto affidabili, questo perchè spesso non vengono aggiornati o contengono informazioni errate.
 
