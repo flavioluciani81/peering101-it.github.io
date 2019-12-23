@@ -2,7 +2,7 @@
 
 ## sommario
 
-- `cos'è`_;
+
 
 ## Cos’è
 
