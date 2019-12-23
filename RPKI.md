@@ -7,7 +7,7 @@
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - [Route Origin Authorization (ROA)](RPKI.md#route-origin-authorization-roa)
 - [Creazione dei ROA](RPKI.md#creazione-dei-roa)
-- [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine-=-0)
+- [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine--0)
 - ROA con AS Origine = 0
 - Route Origin Validation (ROV)
 - Aspetti di configurazione
