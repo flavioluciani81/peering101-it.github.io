@@ -7,7 +7,7 @@
 - [Route Origin Authorization (ROA)](RPKI.md#route-origin-authorization-roa)
 - [Creazione dei ROA](RPKI.md#creazione-dei-roa)
 - [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine--0)
-- Route Origin Validation (ROV)
+- [Route Origin Validation (ROV)](RPKI.md#route-origin-validation-rov)
 - Aspetti di configurazione
 - Verifica della configurazione
 - RPKI e processo di selezione BGP
@@ -99,3 +99,4 @@ Nella definizione di un ROA con AS = 0, è buona pratica definire Max-Maschera =
 
 L’utilizzo dell’AS = 0 è stato specificato nella RFC 7607 - Codification of AS 0 Processing, Agosto 2015.
 
+## Route Origin Validation (ROV)
