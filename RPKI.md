@@ -8,7 +8,6 @@
 - [Route Origin Authorization (ROA)](RPKI.md#route-origin-authorization-roa)
 - [Creazione dei ROA](RPKI.md#creazione-dei-roa)
 - [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine--0)
-- ROA con AS Origine = 0
 - Route Origin Validation (ROV)
 - Aspetti di configurazione
 - Verifica della configurazione
@@ -95,4 +94,9 @@ Da qui è possibile visualizzare l'elenco dei ROA creati, aggiungerne di nuovi o
 
 ## ROA con AS Origine = 0
 
+La RFC 6491 - Resource Public Key Infrastructure (RPKI) Objects Issued by IANA, specifica che il valore AS = 0 in un ROA va utilizzato per identificare prefissi che non devono essere annunciati nell’Internet e quindi non utilizzati per il routing dei pacchetti. Questo consente a chi detiene un determinato prefisso IP di indicare che il prefisso ed eventualmente tutte le sue subnet IP, non può essere utilizzato per il routing dei pacchetti IP.
+
+Nella definizione di un ROA con AS = 0, è buona pratica definire Max-Maschera = Max-ROA, anche se qualcuno preferisce definire come Max-Maschera il valore 32 per IPv4 e 128 per IPv6. Ma il risultato finale non cambia.
+
+L’utilizzo dell’AS = 0 è stato specificato nella RFC 7607 - Codification of AS 0 Processing, Agosto 2015.
 
