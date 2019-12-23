@@ -8,10 +8,8 @@
 - [Creazione dei ROA](RPKI.md#creazione-dei-roa)
 - [ROA con AS Origine = 0](RPKI.md#roa-con-as-origine--0)
 - [Route Origin Validation (ROV)](RPKI.md#route-origin-validation-rov)
-- Aspetti di configurazione
-- Verifica della configurazione
-- RPKI e processo di selezione BGP
-- Software di validazione
+- [Aspetti di configurazione](RPKI.md#aspetti-di-configurazione)
+- [Software di validazione](RPKI.md#software-di-validazione)
 
 ## Cos’è
 
@@ -138,3 +136,6 @@ __esempio ROA con AS = 0__
 
 In questo caso il risultato del processo di validazione sarà sempre uno stato di "Invalid".
 
+## Aspetti di configurazione
+
+## Software di validazione
