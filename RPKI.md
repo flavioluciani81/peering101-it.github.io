@@ -53,7 +53,7 @@ Formato di un ROA IPv4:
 
 | Prefisso originato | 172.16.0.0/16 |
 | ----------- | ------ |
-| Lunghezza massima della maschera | 24 |
+| MaxLength | 24 |
 | AS Origine | 12345 |
 | Firma Digitale | qç!r5@eX!%89?@cv! |
 
@@ -61,7 +61,7 @@ Formato di un ROA IPv6:
 
 | Prefisso originato | 2001:db8:1::/48 |
 | ----------- | ------ |
-| Lunghezza massima della maschera | 48 |
+| MaxLength | 48 |
 | AS Origine | 12345 |
 | Firma Digitale | qç!r5@eX!%89?@cv! |
 
@@ -69,7 +69,7 @@ Un ROA ha 4 componenti:
 
 1) __Prefisso originato__: Un prefisso IPv4 o IPv6, con una determinata lunghezza della maschera. Tipicamente è un prefisso assegnato da un RIR a un NIR/LIR/ISP
 
-2) __Lunghezza massima della maschera__: specifica quali subnet IP del prefisso originato possono essere annunciate
+2) __MaxLength__: la lunghezza massima della maschera, specifica quali subnet IP del prefisso originato possono essere annunciate
 
 3) __AS Origine__: il numero dell’AS che origina il prefisso IP o una sua subnet ammessa, ossia con lunghezza della maschera inferiore o al più uguale a quella specificata nel punto precedente
 
@@ -105,11 +105,11 @@ Il processo di validazione di un annuncio BGP, si basa su un confronto tra le in
 
 ![Validazione RPKI](RPKI_Validazione.png "Validazione RPKI")
 
-Il Validator è un software dedicato a scaricare una copia in locale di tutti i ROA dai repository RPKI dei RIR. Il risultato è una lista di tutte le combinazioni ASNs e prefissi chiamata "validated cache". Il contenuto di questa lista è la vera e propria informazione sulle coppie AS/prefisso chiamata "Validated ROA Payload (VRP)".
+Il Validator è un software dedicato a scaricare una copia in locale di tutti i ROA dai repository RPKI dei RIR. Il risultato è una lista di tutte le combinazioni ASNs e prefissi chiamata "validated cache". Una volta che il ROA viene validatol'oggetto risultante contiene un prefiso IP, il parametro MaxLength (la lunghezza massima della maschera) e l'AS origine del prefiso stesso. Questo oggetto è chiamato "Validated ROA Payload (VRP)".
 
 I router inoltre interrogano il validatore tramite il protocollo RTR per verificare la validità o meno dei prefissi ricevuti dalle sessioni BGP.
 
-Quando un router riceve un annuncio BGP, compara l'annuncio appena ricevuto con la "validated cache". 
+Quando un router riceve un annuncio BGP, compara l'annuncio appena ricevuto con la lista dei VRPs. 
 
 ![processo_comparazione](processo_comparazione.png "processo comparazione")
 
