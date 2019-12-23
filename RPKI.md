@@ -82,4 +82,8 @@ I RIR forniscono una soluzione hosted nascondendo tutti i dettagli relativi alla
 
 La prima cosa da fare è accedere al portale del RIR di riferimento (in questa guida faremo riferimento al portale di RIPE NCC, https://www.ripe.net). Una volta autenticati, cliccare sul tab "My Resources".
 
+![Ripe NCC Portal my resources](ripe_my_resources.png "My Resoures")
 
+Nella schermata successiva, cliccare nel menu a sinistra sulla voce "RPKI dashboard" e quindi sul tab "Route Origin Authorisations (ROAs)"
+
+![RPKI dashboard](rpki_dashboard.png "RPKI dashboard")
