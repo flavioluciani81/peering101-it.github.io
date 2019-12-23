@@ -109,3 +109,12 @@ Il Validator è un software dedicato a scaricare una copia in locale di tutti i 
 
 I router inoltre interrogano il validatore tramite il protocollo RTR per verificare la validità o meno dei prefissi ricevuti dalle sessioni BGP.
 
+Quando un router riceve un annuncio BGP, compara l'annuncio appena ricevuto con la "validated cache". 
+
+![processo_comparazione](processo_comparazione.png "processo comparazione")
+
+I possibili risultati del processo di validazione, come descritto nella RFC 6811, sono tre: Valid, Invalid e NotFound:
+
+- Valid:
+- Invalid:
+- NotFound
