@@ -2,8 +2,8 @@
 
 ## Sommario
 
-- `Cos'è`;
-- Architettura RPKI
+- [Cos'è](RPKI.md#cos-e)
+- [Architettura RPKI](RPKI.md#architettura-rpki)
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - Route Origin Authorization (ROA)
 - Creazione dei ROA
@@ -30,3 +30,5 @@ Questo meccanismo esiste. E’ parte del sistema IRR. Come accennato in preceden
 Per ovviare a questo problema, il gruppo SIDR (Secure Inter Domain Routing) di IETF ha sviluppato nel 2012 un framework (RFC 6481) basato su una struttura pubblica (Resource Public Key Infrastructure) con dei database distribuiti (RPKI repository) dove sono contenute le associazioni <Prefissi; AS autorizzati>. A ciascuna associazione è legato un Certificato Digitale, che consente a chi consulta i database, di verificare che le associazioni siano corrette. Tali attestati (prefissi, ASN e certificati digitali) vengono denominati ROA (Route Origin Authorization).
 
 RPKI utilizza il formato dei certificati digitali X.509 con l’estensione per indirizzi IP e ASN (RFC 3779). I certificati non includono le informazioni di identità ma il loro scopo è solo quello di trasferire il diritto all’uso delle risorse Internet. I RIR svolgono la funzione di Certification Authority (CA) e si occupano dell’emissione dei certificati digitali. L’utilizzo principale dei certificati digitali è quello di validare le chiavi pubbliche e la legittimità di un AS a iniettare nel BGP un determinato blocco di prefissi e di utilizzare un determinato numero di AS.
+
+## Architettura RPKI
