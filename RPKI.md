@@ -144,7 +144,7 @@ Per stabilire la sessione RTR con il Validator è sufficiente specificare tre pa
 2) La porta TCP da utilizzare. Di solito la porta utilizzata dal RPKI Validator è la 323, ma può anche essere diversa. Ad esempio, se si utilizzasse il RPKI Validator fornito dal RIR Europeo RIPE NCC, la porta da utilizzare è la 8282
 3) Il periodo delle query verso il RPKI Validator (refresh time) per il download dei ROA. Un valore tipico utilizzato nelle applicazioni pratiche è 600 sec
 
-```Cisco IOS e IOS XE
+```
 
 Cisco IOS e IOS XE
 
@@ -152,7 +152,7 @@ Cisco IOS e IOS XE
   router(config-router)# bgp rpki server tcp IP-RPKI-Validator port porta-RPKI-Validator refresh secondi
   
 ```
-```Cisco IOS XR
+```
 
 Cisco IOS XR
 
@@ -215,6 +215,26 @@ Network              Maxlen  Origin-AS  Source  Neighbor
 
 
 ```
+
+Di default, gli annunci con stato di validazione RPKI Invalid non partecipano al processo di selezione BGP. Qui di seguito segnaliamo comunque il comando per consentirne l'utilizzo. E' comunque fortemente consigliato non far partecipare gli annunci Invalid al processo di selezione BGP.
+
+NOTA: in presenza di più annunci dello stesso prefisso, di cui almeno uno dichiarato Valid, l’annuncio dichiarato Valid ha comunque la precedenza e viene eletto best-path indipendentemente dalle metriche BGP
+
+```
+Cisco IOS e IOS XE
+
+router(config)# router bgp numero-AS
+ router(config-router)# address-family ipv4 unicast
+ router(config-router-af)# bgp bestpath prefix-validate allow-invalid
+
+Cisco IOS XR
+
+router(config)# router bgp numero-AS
+router(config-bgp)# address-family ipv4 unicast
+router(config-bgp-af)# bgp bestpath origin-as allow invalid
+
+```
+
 
 ## Software di validazione
 
