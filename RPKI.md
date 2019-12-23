@@ -131,3 +131,9 @@ __esempi di validazione__
 | Invalid | AS 6762 | 79.140.91.0/25 |
 | NotFound | AS 1299 | 79.140.0.0/16 |
 
+__esempio ROA con AS = 0__
+
+| ROA | AS Origine: 0 | Prefisso: 79.140.80.0/20 | MaxLength: 20 |
+
+In questo caso il risultato del processo di validazione sarà sempre uno stato di "Invalid".
+
