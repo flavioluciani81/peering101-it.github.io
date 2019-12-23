@@ -123,7 +123,7 @@ Sulla base del risultato ottenuto dal processo di validazione è possibile istru
 
 # esempi di validazione
 
-| ROA | 6762 | 79.140.80.0/20 | 24 |
+| ROA | AS Origine: 6762 | Prefisso: 79.140.80.0/20 | MaxLength: 24 |
 | ----------- | ------ | ------ | ------ |
 | Valid | AS 6762 | 79.140.80.0/21 |
 | Valid | AS 6762 | 79.140.92.0/22 |
