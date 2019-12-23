@@ -5,7 +5,6 @@
 - [Cos'è](RPKI.md#cosè)
 - [Architettura RPKI](RPKI.md#architettura-rpki)
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
-- Route Origin Authorization (ROA)
 - [Route Origin Authorization](RPKI.md#route-origin-authorization)
 - Creazione dei ROA
 - ROA con AS Origine = 0
@@ -49,4 +48,4 @@ Lato ISP, l’architettura prevede l’utilizzo di server denominati *RPKI Valid
 
 ## Route Origin Authorization (ROA)
 
-
+I ROA sono oggetti firmati digitalmente che accoppiano un AS a uno o più prefissi IP. Possono essere visti come degli oggetti che forniscono un mezzo per verificare se un AS è autorizzato ad annunciare un determinato prefisso IP.
