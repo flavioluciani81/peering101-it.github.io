@@ -115,6 +115,8 @@ Quando un router riceve un annuncio BGP, compara l'annuncio appena ricevuto con 
 
 I possibili risultati del processo di validazione, come descritto nella RFC 6811, sono tre: Valid, Invalid e NotFound:
 
-- Valid:
-- Invalid:
-- NotFound
+- Valid: il prefisso nell'annuncio ricevuto è coperto da almeno un ROA
+- Invalid: il prefisso è annunciato da un non autorizzato AS oppure il prefisso è più specifico rispetto alla lunghezza massima autorizzata nel ROA
+- NotFound: il prefisso nell'annuncio non ha un ROA corrispondente
+
+
