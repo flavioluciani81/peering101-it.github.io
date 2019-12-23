@@ -121,4 +121,13 @@ I possibili risultati del processo di validazione, come descritto nella RFC 6811
 
 Sulla base del risultato ottenuto dal processo di validazione è possibile istruire i propri router nel prendere un qualche tipo di decisione come ad esempio modificare la Local Preference in base allo stato di validazione. __E' buona pratica ad ogni modo scartare gli annunci con stato "invalid"__.
 
+# esempi di validazione
+
+| ROA | 6762 | 79.140.80.0/20 | 24 |
+| ----------- | ------ | ------ | ------ |
+| Valid | AS 6762 | 79.140.80.0/21 |
+| Valid | AS 6762 | 79.140.92.0/22 |
+| Invalid | AS 2914 | 79.140.84.0/22 |
+| Invalid | AS 6762 | 79.140.91.0/25 |
+| NotFound | AS 1299 | 79.140.0.0/16 |
 
