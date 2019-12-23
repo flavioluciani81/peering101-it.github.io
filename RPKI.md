@@ -6,6 +6,7 @@
 - [Architettura RPKI](RPKI.md#architettura-rpki)
 - RPKI e prefix Hijacking (esempio con e senza RPKI)
 - Route Origin Authorization (ROA)
+- [Route Origin Authorization (ROA)](RPKI.md#Route-Origin-Authorization-(ROA))
 - Creazione dei ROA
 - ROA con AS Origine = 0
 - Route Origin Validation (ROV)
@@ -45,5 +46,7 @@ Sulla base dei ROA contenuti nei RPKI repository, un AS può validare la corrett
 Affinché tutto ciò sia efficace, è necessaria per un AS la certezza che le informazioni dei RPKI repository siano corrette e sincronizzate a livello mondiale. L’architettura RPKI prevede quindi una gerarchia di RPKI repository e quindi di Certificali Digitali, che segue la stessa gerarchia prevista per l’assegnazione degli indirizzi IP, che può essere semplificata come segue: *IANA→RIR→NIR/LIR*. I 5 RIR mondiali hanno il compito di gestire ciascuno il RPKI repository dei ROA della propria area, e di mettere queste informazioni a disposizione degli altri RIR e degli ISP di tutto il mondo.  
 
 Lato ISP, l’architettura prevede l’utilizzo di server denominati *RPKI Validator*, che a loro volta si interfacciano con i RPKI repository dei vari RIR per effettuare un download locale dei ROA. I router di Edge dell’ISP, attraverso il protocollo standard *RPKI-to-Router Protocol* (RFC 6810 - The Resource Public Key Infrastructure to Router Protocol, Gennaio 2013), scaricano localmente i ROA presenti nel RPKI Validator, inserendoli in una *RPKI Table*. All’arrivo di un annuncio BGP, un router può così inferire sulla validità o meno degli annunci che riceve, confrontando il contenuto degli annunci con quello dei ROA presenti nella propria RPKI Table.
+
+## Route Origin Authorization (ROA)
 
 
