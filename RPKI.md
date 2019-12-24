@@ -304,7 +304,7 @@ route-map RPKI permit 10
 
 ```
 
-Copntenuto della tabella BGP 
+Contenuto della tabella BGP 
 
 ```
 
